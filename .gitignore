@@ -1,0 +1,14 @@
+# MkDocs documentation
+docs/site/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# PyCharm
+.idea/
