@@ -11,5 +11,10 @@ jobs:
   run_tests:
     runs-on: [self-hosted]
     steps:
-      - name: Run linters
+      - name: python ver
         run: python --version
+      - name: pwd
+        run: pwd
+      - name: Run linters
+        run: black ./mlops/features.py
+
