@@ -1,5 +1,6 @@
 import pandas as pd
 import click
+import yaml
 
 MIN_AREA = 15  # Outlier range for floor area
 MAX_AREA = 300
@@ -32,9 +33,7 @@ def clean_data(input_path: str, output_path: str):
     # Fix kitchen area outliers.
     # At first, replace all outliers with 0.
     df.loc[
-        (df["kitchen_area"] >= MAX_KITCHEN) | (df["kitchen_area"] <= MIN_KITCHEN),
-        "kitchen_area",
-    ] = 0
+        (df["kitchen_area"] >= MAX_KITCHEN) | (df["kitchen_area"] <= MIN_KITCHEN), "kitchen_area",] = 0
     # Then calculate kitchen area based on the floor area, except for studios.
     area_mean, kitchen_mean = df[["area", "kitchen_area"]].quantile(0.5)
     kitchen_share = kitchen_mean / area_mean
