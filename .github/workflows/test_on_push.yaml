@@ -11,15 +11,5 @@ jobs:
   run_tests:
     runs-on: [self-hosted]
     steps:
-      # Чекаутим код
-      - uses: actions/checkout@master
-      # Устанавливаем python нужной версии
-      #- uses: actions/setup-python@v1
-      #  with:
-      #    python-version: '3.8'
-      #    architecture: 'x64'
-      #- name: Install requirements
-      # Устанавливаем зависимости
-      #  run: pip install -r requirements.txt
       - name: Run linters
         run: python --version
