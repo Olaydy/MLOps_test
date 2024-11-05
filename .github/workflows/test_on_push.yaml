@@ -16,5 +16,5 @@ jobs:
       - name: pwd
         run: pwd
       - name: Run linters
-        run: black ./mlops/features.py
+        run: flake8 ./mlops/features.py
 
