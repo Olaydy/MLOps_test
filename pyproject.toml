@@ -12,6 +12,11 @@ numpy = "^1.26.3"
 matplotlib = "^3.8.2"
 black = "^23.12.1"
 dvc = "^3.50.0"
+scikit-learn = "^1.4.0"
+triton = "^3.1.0"
+pandas = "^2.2.3"
+torch = "^2.5.1"
+flake8 = "^7.1.1"
 
 [build-system]
 requires = ["poetry-core"]
