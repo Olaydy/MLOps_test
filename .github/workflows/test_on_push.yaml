@@ -11,6 +11,8 @@ jobs:
   run_tests:
     runs-on: [self-hosted]
     steps:
+      - name: install venv
+        run: sudo apt install -y python3-venv
       - name: venv
         run: python -m venv venv
       - name: venv activate
