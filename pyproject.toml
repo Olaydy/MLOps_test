@@ -17,6 +17,7 @@ triton = "^3.1.0"
 pandas = "^2.2.3"
 torch = "^2.5.1"
 flake8 = "^7.1.1"
+mypy = "^1.13.0"
 
 [build-system]
 requires = ["poetry-core"]

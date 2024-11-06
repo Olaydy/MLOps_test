@@ -17,4 +17,6 @@ jobs:
         run: flake8 ./mlops/features.py
       - name: Run script
         run: python3 ./mlops/features.py
+      - name: Run mypy
+        run: mypy --ignore-missing-imports ./mlops/features.py
 

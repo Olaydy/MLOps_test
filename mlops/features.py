@@ -14,7 +14,7 @@ MAX_KITCHEN = 70
 @click.command()
 @click.argument("input_path", type=click.Path())
 @click.argument("output_path", type=click.Path())
-def clean_data(input_path: str, output_path: str, a):
+def clean_data(input_path: str, output_path: str):
     """Function removes excess columns and enforces
     correct data types.
     :param input_path: Path to read filtered by region DataFrame
@@ -44,7 +44,12 @@ def clean_data(input_path: str, output_path: str, a):
 
     df.to_csv(output_path, index=False)
 
+def bad_func(a:int):
+  a = a + 1
+  print("a=", a)
+  return a
 
 if __name__ == "__main__":
     print("Hello word!")
+    bad_func(10.1)
     # clean_data()
