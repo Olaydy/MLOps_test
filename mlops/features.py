@@ -53,5 +53,5 @@ def bad_func(a: int):
 
 if __name__ == "__main__":
     print("Hello word!")
-    bad_func(10.1)
+    bad_func(10)
     # clean_data()
