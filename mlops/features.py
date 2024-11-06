@@ -44,10 +44,12 @@ def clean_data(input_path: str, output_path: str):
 
     df.to_csv(output_path, index=False)
 
-def bad_func(a:int):
-  a = a + 1
-  print("a=", a)
-  return a
+
+def bad_func(a: int):
+    a = a + 1
+    print("a=", a)
+    return a
+
 
 if __name__ == "__main__":
     print("Hello word!")
