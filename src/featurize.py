@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def get_features(dataset):
 
     features = dataset.copy()
@@ -17,8 +16,7 @@ def get_features(dataset):
 
 
 if __name__ == '__main__':
-
-    dataset = pd.read_csv('../data/raw/iris.csv')
+    dataset = pd.read_csv('data/raw/iris.csv')
 
     features  = get_features(dataset)
-    features.to_csv('../data/interim/features_iris.csv', index=False)
+    features.to_csv('data/interim/features_iris.csv', index=False)

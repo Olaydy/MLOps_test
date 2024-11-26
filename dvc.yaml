@@ -1,0 +1,40 @@
+stages:
+  #load_data:
+  #  cmd: python src/load_data.py
+  #  outs:
+  #  - data/raw/iris.csv
+
+  featurize: 
+    cmd: python src/featurize.py
+    deps:
+    - data/raw/iris.csv
+    - src/featurize.py
+    outs:
+    - data/interim/features_iris.csv
+    
+  split_dataset: 
+    cmd: python src/split_dataset.py
+    deps:
+    - data/interim/features_iris.csv
+    - src/split_dataset.py
+    outs:
+    - data/external/train.csv
+    - data/external/test.csv
+    
+  train: 
+    cmd: python src/train.py
+    deps:
+    - data/external/train.csv
+    - src/train.py
+    outs:
+    - models/model.pkl
+
+  evaluate: 
+    cmd: python src/evaluate.py
+    deps:
+    - models/model.pkl
+    - data/external/test.csv
+    - data/raw/iris.csv
+    - src/evaluate.py
+    outs:
+    - reports/eval.txt
