@@ -1,9 +1,0 @@
-[core]
-#  remote = remote
-#  autostage = false
-
-['remote "remote"']
-#  url = s3://
-#  edpointurl =
-#  access_key_id =
-#  secret_access_key =
