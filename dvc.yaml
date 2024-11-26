@@ -36,5 +36,5 @@ stages:
     - data/external/test.csv
     - data/raw/iris.csv
     - src/evaluate.py
-    outs:
-    - reports/eval.txt
+    metrics:
+    - reports/summary.json

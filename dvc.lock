@@ -72,11 +72,11 @@ stages:
       size: 871
     - path: src/evaluate.py
       hash: md5
-      md5: d65400247e6d85ee768c1012e47787df
-      size: 921
+      md5: 6469fe95f32fe0af4f1e2e54fa81fe9c
+      size: 913
       isexec: true
     outs:
-    - path: reports/eval.txt
+    - path: reports/summary.json
       hash: md5
       md5: 2cff7b6d8590f8c37eaa01feff99962e
       size: 123

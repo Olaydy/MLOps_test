@@ -21,13 +21,11 @@ if __name__ == '__main__':
     cm = confusion_matrix(prediction, y)
     f1 = f1_score(y_true=y, y_pred=prediction, average='macro')
 
-    json.dump(
-        obj={
+    result={
             'f1_score': f1,
             'confusion_matrix': {
                 'classes': classes,
                 'matrix': cm.tolist()
             }
-        },
-        fp=open('reports/eval.txt', 'w')
-    )
+    }
+    json.dump(result, fp=open('reports/summary.json', 'w'))
